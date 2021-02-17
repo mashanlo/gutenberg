@@ -1,0 +1,82 @@
+.entry-content
+  
+  // - - - title
+  h1, h2, h3, h4, h5, h6
+    font-weight: 700
+
+  h1, h2
+    line-height: 1.4
+
+  @each $elem, $size in $gb-headings-sizes
+    #{$elem}
+      font-size: $size
+
+  // - - - link
+  a
+    color: $gb-link-color
+    text-decoration: underline
+    &:hover
+      color: $gb-text-color
+    &:visited
+      color: $gb-text-color
+    &:active
+      color: $gb-accent-color
+
+  // - - - blockquote
+  blockquote
+    padding-left: $gb-padding-left
+    font-style: italic
+    p
+      margin-bottom: 1rem
+    cite
+      font-style: normal
+      &::before
+        content: '—'
+
+  figure
+    blockquote
+      padding: 0 $gb-padding
+      text-align: center
+      font-size: $gb-mobile-font-size
+      @media (min-width: 768px)
+        font-size: 2rem
+
+  // - - - b, i, pre, code
+  strong, b
+    font-weight: 700
+  em, i
+    font-style: italic
+
+  code, pre
+    font-family: $gb-code-font
+  pre
+    overflow: auto
+
+  .wp-block-code
+    background: rgba($gb-black-color, .03)
+
+  sub, sup
+    font-size: 75%
+    line-height: 0
+    position: relative
+    vertical-align: baseline
+  sup
+    top: -.5rem
+  sub
+    bottom: -.25rem
+
+  @each $elem, $size in $gb-paragraph-sizes
+    .has-#{$elem}-font-size
+      font-size: $size
+
+  // - - - button
+  .wp-block-button
+    display: inline-block
+    &__link
+      padding: 1.3rem 3rem
+      background: $gb-text-color
+      color: $gb-white-color
+      text-decoration: none
+      cursor: pointer
+      &:hover
+        color: $gb-white-color

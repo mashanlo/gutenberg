@@ -1,0 +1,49 @@
+// - - - colors  
+$gb-accent-color: #8c00f7
+$gb-text-color: #333333
+$gb-link-color: #888888
+
+$gb-white-color: #ffffff
+$gb-black-color: #000000
+$gb-light-gray: #f5f5f5
+$gb-dark-gray: #aaaaaa
+
+// - - - fonts
+$gb-main-font: 'Merriweather'
+$gb-code-font: 'Source Code Pro'
+
+$gb-desktop-font-size: 1.8rem
+$gb-desktop-line-height: 1.7
+$gb-mobile-font-size: 1.5rem
+$gb-mobile-line-height: 1.6
+
+$gb-headings-sizes: ( h6: 1.5rem, h5: 2rem, h4: 2.5rem, h3: 3rem, h2: 3.5rem, h1: 4.5rem )
+$gb-paragraph-sizes: ( small: 1.3rem, normal: 1.6rem, medium: 2rem, large: 3.6rem, huge: 4.2rem )
+
+// - - - width
+$gb-desktop-width: 50%
+$gb-tablet-width: 80%
+$gb-mobile-width: 90%
+
+// - - - margin & padding
+$gb-padding: 2rem         // code, pre
+$gb-padding-left: 3rem    // ul, ol, li
+$gb-margin-bottom: 2rem   // > *
+
+// - - - sett
+html
+  font-size: 10px // 10px = 1rem
+
+.entry-content
+  width: $gb-mobile-width
+  margin: 0 auto
+  font-size: $gb-mobile-font-size
+  line-height: $gb-mobile-line-height
+  font-family: $gb-main-font
+  color: $gb-text-color
+  @media (min-width: 768px)
+    width: $gb-tablet-width
+    font-size: $gb-desktop-font-size
+    line-height: $gb-desktop-line-height
+  @media (min-width: 992px)
+    width: $gb-desktop-width
